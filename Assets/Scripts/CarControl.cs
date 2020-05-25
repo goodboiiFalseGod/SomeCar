@@ -29,14 +29,12 @@ public class CarControl : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.W))
             {
-                Vector2 way = front.transform.position - carTransform.position;
-                carRigidbody.AddForce(way * 7.5f);
+                carRigidbody.AddForce(carTransform.up * 6.5f);
             }
 
             if (Input.GetKey(KeyCode.S))
             {
-                Vector2 way = front.transform.position - carTransform.position;
-                carRigidbody.AddForce(-way * 5f);
+                carRigidbody.AddForce(-carTransform.up * 4f);
             }
 
             if (Input.GetKey(KeyCode.A))

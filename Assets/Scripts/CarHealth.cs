@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CarHealth : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class CarHealth : MonoBehaviour
     private int frameSkip = 60;
     private int frame = 0;
     public int GameDifficulty = 1;
+
+    public int Health { 
+        get { return health; }
+        set { health = value; UIController.instance.ShowHealth(value); }
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -18,11 +24,11 @@ public class CarHealth : MonoBehaviour
         {
             frame = 0;
 
-            health -= 1;
-            if(health <= 0)
+            Health -= 1;
+            if(Health <= 0)
             {
                 tag = "DeadCar";
-                Debug.Log(health);
+                Debug.Log(Health);
             }
         }
     }

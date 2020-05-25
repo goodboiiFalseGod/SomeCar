@@ -9,14 +9,17 @@ public class UIController : MonoBehaviour
     public Text Ulose;
     public Text ScoreUI;
     public Text CarHealth;
+
+    public static UIController instance;
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         Ulose.text = "";
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {   
         foreach (VictimHealth victimHealth in FindObjectsOfType<VictimHealth>())
         {
@@ -51,5 +54,10 @@ public class UIController : MonoBehaviour
                 Ulose.text = "You Lose";
             }
         }
+    }*/
+
+    public void ShowHealth(int hp)
+    {
+        CarHealth.text = hp.ToString();
     }
 }

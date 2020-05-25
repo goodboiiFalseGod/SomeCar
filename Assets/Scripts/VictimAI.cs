@@ -9,6 +9,7 @@ public class VictimAI : MonoBehaviour
     public Transform carTransform;
     private Transform victimTransform;
     private Rigidbody2D victimRigidbody;
+    public float speed = 1.4f;
 
     private double distance;
     private Vector2 carDirection;
@@ -25,11 +26,12 @@ public class VictimAI : MonoBehaviour
     void Update()
     {
         distance = Math.Sqrt(Math.Pow(victimTransform.position.y - carTransform.position.y, 2) + Math.Pow(victimTransform.position.x - carTransform.position.x, 2));
-        carDirection = new Vector2(victimTransform.position.y - carTransform.position.y, victimTransform.position.x - carTransform.position.x);
+        //carDirection = new Vector2(victimTransform.position.y - carTransform.position.y, victimTransform.position.x - carTransform.position.x);
+        carDirection = (carTransform.position - transform.position).normalized;
         
         if (distance < 5)
         {
-            victimRigidbody.AddForce(-carDirection * 1.4f + -victimRigidbody.velocity * 0.1f);
+            victimRigidbody.AddForce(-carDirection * speed);
         }
 
         //Debug.Log(distance);

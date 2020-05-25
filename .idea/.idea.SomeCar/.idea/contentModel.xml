@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Сергей\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Сергей\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_SomeCar.1453612698.00" t="ExcludeRecursive" />
+    <e p="D:\Work\GameDev\Projects\SomeCar" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="Components" t="Include">
+            <e p="Car.cs" t="Include" />
+            <e p="CarInput.cs" t="Include" />
+            <e p="Health.cs" t="Include" />
+            <e p="PhysicalBody.cs" t="Include" />
+            <e p="Speed.cs" t="Include" />
+            <e p="TransformRef.cs" t="Include" />
+          </e>
+          <e p="EcsStartup.cs" t="Include" />
+          <e p="Systems" t="Include">
+            <e p="CarInputSystem.cs" t="Include" />
+            <e p="GameInitSystem.cs" t="Include" />
+            <e p="MoveCarSystem.cs" t="Include" />
+          </e>
+          <e p="UnityComponents" t="Include">
+            <e p="CarControl.cs" t="Include" />
+            <e p="CarHealth.cs" t="Include" />
+            <e p="NatureForces.cs" t="Include" />
+            <e p="UIController.cs" t="Include" />
+            <e p="VictimAI.cs" t="Include" />
+            <e p="VictimHealth.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="SomeCar.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

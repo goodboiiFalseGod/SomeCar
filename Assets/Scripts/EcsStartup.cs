@@ -22,6 +22,7 @@ namespace Client {
                 
                 .Add(new CarInputSystem())
                 .Add(new MoveCarSystem())
+                .Add(new DragSystem())
                 
                 // register one-frame components (order is important), for example:
                 // .OneFrame<TestComponent1> ()

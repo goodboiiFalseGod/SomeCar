@@ -4,6 +4,6 @@
     {
         public float forwardSpeed;
         public float backwardSpeed;
-        public float rotationSpeed;
+        public float turnSpeed;
     }
 }

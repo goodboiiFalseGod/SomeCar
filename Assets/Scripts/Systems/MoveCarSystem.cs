@@ -1,4 +1,5 @@
 ﻿using Leopotam.Ecs;
+using UnityEngine;
 
 namespace DefaultNamespace
 {
@@ -16,19 +17,14 @@ namespace DefaultNamespace
                 ref var car = ref _filter.Get3(index);
                 ref var input = ref _filter.Get4(index);
 
-                if (input.forward > 0)
-                {
-                    physics.rigidbody.AddForce(transform.value.up * car.forwardSpeed);
-                }
-                else if (input.forward < 0)
-                {
-                    physics.rigidbody.AddForce(-transform.value.up * car.backwardSpeed);
-                }
-
+                
+                physics.rigidbody.AddForce(input.forward * car.backwardSpeed * transform.value.up);
+                
                 if (input.right != 0)
                 {
-                    physics.rigidbody.rotation -= input.right * car.rotationSpeed;
+                    physics.rigidbody.rotation -= input.right * car.turnSpeed;
                 }
+                
                 
             }
         }

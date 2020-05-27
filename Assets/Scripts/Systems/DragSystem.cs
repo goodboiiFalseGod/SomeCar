@@ -22,20 +22,20 @@ namespace DefaultNamespace
 
                 if (math.abs(physics.rigidbody.velocity.x) > physics.drag)
                 {
-                    velocity.x -= math.sign(physics.rigidbody.velocity.x) * physics.drag * dragCoef;
+                    velocity.x -= math.sign(physics.rigidbody.velocity.x) * physics.drag * dragCoef * Time.deltaTime * 60;
                 }
                 else
                 {
-                    velocity.x /= 2;
+                    velocity.x /= 2  * Time.deltaTime * 60;;
                 }
                 
                 if (math.abs(physics.rigidbody.velocity.y) > physics.drag)
                 {
-                    velocity.y -= math.sign(physics.rigidbody.velocity.y) * physics.drag * dragCoef;
+                    velocity.y -= math.sign(physics.rigidbody.velocity.y) * physics.drag * dragCoef * Time.deltaTime * 60;
                 }
                 else
                 {
-                    velocity.y /= 2;
+                    velocity.y /= 2  * Time.deltaTime * 60;;
                 }
 
                 physics.rigidbody.velocity = velocity;

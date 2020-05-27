@@ -18,11 +18,11 @@ namespace DefaultNamespace
                 ref var input = ref _filter.Get4(index);
 
                 
-                physics.rigidbody.AddForce(input.forward * car.backwardSpeed * transform.value.up);
+                physics.rigidbody.AddForce(input.forward * car.backwardSpeed * transform.value.up * Time.deltaTime * 60);
                 
                 if (input.right != 0)
                 {
-                    physics.rigidbody.rotation -= input.right * car.turnSpeed;
+                    physics.rigidbody.rotation -= input.right * car.turnSpeed * Time.deltaTime * 60;
                 }
                 
                 

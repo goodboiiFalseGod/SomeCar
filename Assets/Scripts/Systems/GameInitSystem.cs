@@ -19,8 +19,8 @@ namespace DefaultNamespace
             physicalBody.drag = 0.075f;
             
             ref Car car = ref carEntity.Set<Car>();
-            car.forwardSpeed = 6.5f;
-            car.backwardSpeed = 4.5f;
+            car.forwardSpeed = 65f;
+            car.backwardSpeed = 45f;
             car.turnSpeed = 2f;
             carEntity.Get<CarInput>();
         }

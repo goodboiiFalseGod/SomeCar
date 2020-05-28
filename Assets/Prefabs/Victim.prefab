@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4862221556825019423}
   m_Layer: 0
   m_Name: Victim
-  m_TagString: Untagged
+  m_TagString: Alive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,6 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carTransform: {fileID: 6911085236773709667, guid: 9b8bb27a64f554f4aa4f19a1832078bb,
     type: 3}
+  speed: 1.4
 --- !u!114 &4387670342223929392
 MonoBehaviour:
   m_ObjectHideFlags: 0

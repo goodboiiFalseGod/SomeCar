@@ -1,4 +1,5 @@
 using DefaultNamespace;
+using JetBrains.Annotations;
 using Leopotam.Ecs;
 using Unity.Mathematics;
 using UnityEngine;
@@ -76,6 +77,21 @@ namespace Client {
         {
             Vector2 dir = (v2 - v1).normalized;
             return dir;
+        }
+
+        
+        //[CanBeNull]
+        private Vector3[] FindAllObstacles(Vector3 position, float radius, LayerMask whatIsObstacle)
+        {
+            RaycastHit2D[] hits = Physics2D.CircleCastAll(position, radius, Vector2.zero, 0f, whatIsObstacle);
+            Vector3[] points = new Vector3[hits.Length];
+
+            for (int i = 0; i < hits.Length; i++)
+            {
+                points[i] = hits[i].point;
+            }
+
+            return points;
         }
     }
 }

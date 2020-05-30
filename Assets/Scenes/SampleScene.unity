@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 349975617}
   - component: {fileID: 349975616}
   - component: {fileID: 349975620}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Finish
   m_Icon: {fileID: 0}
@@ -548,7 +548,7 @@ GameObject:
   - component: {fileID: 541561145}
   - component: {fileID: 541561144}
   - component: {fileID: 541561148}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Finish
   m_Icon: {fileID: 0}
@@ -676,7 +676,7 @@ GameObject:
   - component: {fileID: 726106676}
   - component: {fileID: 726106675}
   - component: {fileID: 726106679}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Finish
   m_Icon: {fileID: 0}
@@ -935,7 +935,7 @@ GameObject:
   - component: {fileID: 933058642}
   - component: {fileID: 933058641}
   - component: {fileID: 933058645}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Finish
   m_Icon: {fileID: 0}
@@ -1256,6 +1256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830cd83d328b8f54eba96d34db57ceb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameData: {fileID: 11400000, guid: 969245402643e6e49a16dbaf78f1c1f1, type: 2}
 --- !u!1 &1271211689
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,7 +1445,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1776469328}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1480,7 +1481,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1882949550}
   - component: {fileID: 1882949549}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -8,6 +8,7 @@ namespace Client {
     sealed class VictimAISystem : IEcsRunSystem {
         // auto-injected fields.
         readonly EcsWorld _world = null;
+        private readonly GameData _gameData;
 
         private EcsFilter<VictimAIComponent, TransformRef, PhysicalBody> _filter;
         private EcsFilter<TransformRef, Car> _filter2;

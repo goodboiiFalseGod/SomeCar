@@ -11,7 +11,7 @@ namespace Client {
         private EcsFilter<VictimAIComponent, TransformRef, PhysicalBody> _filter;
         private EcsFilter<TransformRef, Car> _filter2;
 
-        void IEcsRunSystem.Run () {
+        /*void IEcsRunSystem.Run () {
             // add your run code here.
             float dis;
             Vector2 dir;
@@ -29,9 +29,44 @@ namespace Client {
 
                     if (dis < 5)
                     {
-                        Debug.Log(-dir * 1.4f);
                         physical.rigidbody.AddForce(-dir * 1.4f);
                     }
+                }
+            }
+        }*/
+
+        void IEcsRunSystem.Run()
+        {
+            // add your run code here.
+            float dis;
+            Vector2 dir;
+
+            foreach (var index in _filter)
+            {
+                ref var ai = ref _filter.Get1(index);
+                ref var transform = ref _filter.Get2(index);
+                ref var physical = ref _filter.Get3(index);
+
+                RaycastHit2D[] raycasts = Physics2D.CircleCastAll(transform.value.position, 10, Vector2.zero);
+
+                dis = raycasts[0].distance;
+                dir = raycasts[0].normal;
+
+                foreach (var raycast in raycasts)
+                {
+                    Debug.Log(dis);
+                    Debug.Log(dir);
+
+                    if (raycast.distance > dis & raycast.distance != 0)
+                    {
+                        dis = raycast.distance;
+                        dir = raycast.normal;
+                    }
+                }
+
+                if (dis < 5)
+                {
+                    physical.rigidbody.AddForce(dir * 1.4f);
                 }
             }
 

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4387670342223929395}
   - component: {fileID: 4387670342223929392}
   - component: {fileID: 4862221556825019423}
+  - component: {fileID: 2824329094037896269}
   m_Layer: 0
   m_Name: Victim
   m_TagString: Alive
@@ -104,7 +105,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &4387670342223929394
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -161,3 +162,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 100
+--- !u!114 &2824329094037896269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4387670342223929401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87bbb8b1201aac74483e4b8324ec3a8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

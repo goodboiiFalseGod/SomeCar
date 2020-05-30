@@ -29,6 +29,8 @@ namespace DefaultNamespace
             foreach(var victObj in victObjs)
             {
                 EcsEntity victimEntity = _world.NewEntity();
+                victObj.GetComponent<VictimView>()._victimEntity = victimEntity;
+
                 victimEntity.Get<TransformRef>().value = victObj.transform;
 
                 ref PhysicalBody physBody = ref victimEntity.Get<PhysicalBody>();
@@ -37,7 +39,7 @@ namespace DefaultNamespace
 
                 ref VictimAIComponent victimAI = ref victimEntity.Get<VictimAIComponent>();
                 victimAI.carDirection = Vector2.zero;
-                victimAI.carDistance = 0;
+                victimAI.carDistance = 10;
 
                 ref Victim victim = ref victimEntity.Get<Victim>();
                 victim.health = 100;
